@@ -914,10 +914,9 @@ button, a { transition: var(--transition); }
 
 
 
-/* Center the mockup image in the blog download section */
 .blog {
-  padding-top: var(--section-padding); /* Keep top space */
-  padding-bottom: 0; /* Remove bottom space */
+  padding-top: var(--section-padding); 
+  padding-bottom: 0; 
 }
 
 
@@ -927,16 +926,33 @@ button, a { transition: var(--transition); }
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 .phone-mockup {
-  margin-top: 50px;
-  height: 500px;
-  width: 500px;
+  max-width: 600px; 
+  width: 80%; 
+  height: auto;
+  object-fit: contain;
 }
 
-/* Center the mockup image in the CTA section */
+@media (max-width: 768px) {
+
+  .phone-mockup {
+    max-width: 500px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .phone-mockup {
+    max-width: 400px;
+    width: 95%;
+  }
+}
+
+
+
 .cta-phone-mockup-container {
   display: flex;
   justify-content: center;
